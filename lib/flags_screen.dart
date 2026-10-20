@@ -81,8 +81,6 @@ class _FlagScreenState extends State<FlagScreen> {
                 message: message,
               ),
               const SizedBox(height: 20),
-
-              // Четыре кнопки с вариантами (через TextButton)
               for (String country in countries)
                 Padding(
                   padding:
@@ -104,8 +102,6 @@ class _FlagScreenState extends State<FlagScreen> {
                 ),
 
               const SizedBox(height: 20),
-
-              // Кнопка "Следующий флаг" (тоже TextButton)
               TextButton(
                 onPressed: nextFlag,
                 style: TextButton.styleFrom(
