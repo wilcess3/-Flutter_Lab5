@@ -1,17 +1,39 @@
-# my_app_aristova
+# Приложение «Угадай флаг»
 
-A new Flutter project.
+Приложение-игра на тему «Угадай флаг». На экране показывается случайный флаг страны, а пользователю нужно выбрать правильное название из четырёх предложенных вариантов. При нажатии на кнопку «Следующий флаг» игра генерирует новый случайный флаг.
 
-## Getting Started
+## Автор
+- Аристова Анастасия
+- Группа: ИСП-241
+- Дата сдачи: 20.10.26
 
-This project is a starting point for a Flutter application.
+## Стек и версии
+* Flutter: 3.47.3 
+* Dart: 3.13.3
+* Платформа: Web (Chrome)
+* IDE: VS Code
 
-A few resources to get you started if this is your first Flutter project:
+## Скриншот приложения
+![Скриншот приложения](img/step6_Aristova.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Структура проекта
+* `lib/main.dart` — точка входа в приложение, настройка `MaterialApp` и отключение DEBUG-баннера
+* `lib/gradient_container.dart` — кастомный виджет для отрисовки градиентного фона
+* `lib/flag_card.dart` — кастомный виджет для отображения картинки флага и текста
+* `lib/flag_screen.dart` — главный экран игры, содержит логику, состояние и кнопки
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Как запустить
+```bash
+git clone <ссылка на репозиторий>
+cd <папка проекта>
+flutter pub get
+flutter run -d chrome
+```
+## Что изучили
+1. Разбивка кода на файлы: Научилась создавать собственные виджеты-классы и выносить каждый в отдельный .dart файл, чтобы код не превращался в один огромный и запутанный main.dart
+
+2. Управление состоянием: Закрепила на практике работу с StatefulWidget и использование setState(). Поняла как заставить интерфейс перерисоваться в ответ на действия пользователя (нажатие кнопок)
+
+3. Передача данных через параметры: Освоила передачу информации (текста, путей к картинкам и цветов) внутрь виджетов через их конструкторы
+
+4. Работа с ресурсами (Assets): Научилась подключать локальные изображения через pubspec.yaml и выводить их на экран с помощью виджета Image.asset
